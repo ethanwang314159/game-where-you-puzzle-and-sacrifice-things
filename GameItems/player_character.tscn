@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://d33f3c07cmekf"]
+
+[ext_resource type="Texture2D" uid="uid://dkmimvbswg1jw" path="res://Textures/spriteSheet.png" id="1_wdn2d"]
+[ext_resource type="Script" uid="uid://rbv6b5kej3b4" path="res://GameItems/state_machine.gd" id="2_o3rm3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xgkfm"]
+atlas = ExtResource("1_wdn2d")
+region = Rect2(0, 0, 128, 64)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sac28"]
+radius = 29.017237
+
+[node name="PlayerCharacter" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_xgkfm")
+hframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_sac28")
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("2_o3rm3")

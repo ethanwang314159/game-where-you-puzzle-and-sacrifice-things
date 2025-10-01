@@ -11,8 +11,14 @@ config_version=5
 [application]
 
 config/name="game where you puzzle and sacrifice things"
+run/main_scene="uid://gv8xhgy23sjm"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=640
+window/size/viewport_height=352
 
 [editor_plugins]
 
@@ -20,5 +26,7 @@ enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
+textures/canvas_textures/default_texture_repeat=1
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
